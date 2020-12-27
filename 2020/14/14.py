@@ -48,19 +48,10 @@ def part2(l):
                 address_str = address_result % floating
                 addresses.append(int(address_str, 2))
             value = int(m.group(2))
-            # get binary string of value
-            # binary_value_str = format(value, 'b').zfill(len(mask))
-            # get masked result
-            # value_result = ("").join([j if i == 'X' else i for i,j in zip(mask, binary_value_str)])
             # write result into all addresses
             for a in addresses:
-                # memory[a].append(int(value_result, 2))
                 memory[a] = value
         idx += 1
-    # all_x = []
-    # for x in memory.values():
-    #     all_x += x
-    # return sum(all_x)
     return sum(memory.values())
 
 if __name__ == '__main__':
