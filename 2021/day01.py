@@ -1,3 +1,5 @@
+from pathlib import PurePath
+
 def part1(l):
     inc = 0
     for i in range(1, len(l)):
@@ -20,7 +22,7 @@ def test():
 
 
 if __name__ == '__main__':
-    with open('./data/input-01.txt', 'r') as f:
+    with open(f'./data/input-{PurePath(__file__).stem}.txt', 'r') as f:
         l = list(map(int, f.readlines()))
     print("Part 1:", part1(l))
     print("Part 2:", part2(l))
