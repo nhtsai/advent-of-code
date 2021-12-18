@@ -18,6 +18,6 @@ def test():
 
 if __name__ == '__main__':
     with open(f'./data/input-{PurePath(__file__).stem}.txt', 'r') as f:
-        l = list(map(int, f.readlines()))
+        l = list(map(int, f.read().splitlines()))
     print("Part 1:", part1(l))
     print("Part 2:", part2(l))
